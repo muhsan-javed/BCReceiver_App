@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-public class MyDemoReciver extends BroadcastReceiver {
+public class MyDemoReciver2 extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
@@ -19,7 +19,7 @@ public class MyDemoReciver extends BroadcastReceiver {
             String stringExtra= bundle.getString("message_key");
 
             initialCode++;
-            stringExtra+="->BR";
+            stringExtra+="->BR2";
 
             String output = "initial Code: "+ initialCode +"\n" +
                     "initial Data: "+ initialData+ "\n"+
@@ -28,7 +28,7 @@ public class MyDemoReciver extends BroadcastReceiver {
             Toast.makeText(context, output, Toast.LENGTH_SHORT).show();
             Log.d("TAG", "onReceiver: "+ output);
 
-            initialData = "BR";
+            initialData = "BR2";
             bundle.putString("message_key", stringExtra);
 
             setResult(initialCode, initialData, bundle);
@@ -36,8 +36,8 @@ public class MyDemoReciver extends BroadcastReceiver {
         }
 
 
-      //  Toast.makeText(context, "My Demo Receiver called: Receiver App ", Toast.LENGTH_SHORT).show();
-        
+        //Toast.makeText(context, "My Demo Receiver called: Receiver App  2", Toast.LENGTH_SHORT).show();
+
        /* if ("com.muhsanapps.receiverapp.ACTION_SEND".equals(intent.getAction())) {
 
             String extraData = intent.getStringExtra("com.muhsanapps.EXTRA_DATA");

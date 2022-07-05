@@ -22,12 +22,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".MyDemoReciver"
+<!--        <receiver android:name=".MyDemoReciver">-->
+<!--           &lt;!&ndash; android:exported="true">-->
+<!--            <intent-filter android:priority="30">-->
+<!--                <action android:name="com.muhsanapps.receiverapp.ACTION_SEND"/>-->
+<!--            </intent-filter>&ndash;&gt;-->
+<!--        </receiver>-->
+        <receiver android:name=".MyDemoReciver1"
             android:exported="true">
-            <intent-filter >
+            <intent-filter android:priority="40">
                 <action android:name="com.muhsanapps.receiverapp.ACTION_SEND"/>
             </intent-filter>
-
         </receiver>
     </application>
 
